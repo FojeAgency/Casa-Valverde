@@ -1,0 +1,539 @@
+/* Importing the Libre Caslon Text font */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.padding{
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
+.padding-top{
+  padding-top: 50px !important;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+body {
+  font-family: "Libre Caslon Text", serif;
+  background-color: #455d58;
+  /* Background color */
+  color: #faf7f2;
+  /* Text color */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+
+header .logo {
+  font-size: 1.5em;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  height: 60vh;
+  background: linear-gradient(rgba(69, 93, 88, 0.95), rgba(69, 93, 88, 0.95)), url('../data/1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fcf7f2;
+  z-index: 0;
+  position: relative;
+}
+
+.banner2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: #fcf7f2;
+  background-size: cover;
+  background-position: center;
+  color: #244642;
+  z-index: 0;
+  position: relative;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 35%;
+  padding: 20px;
+  
+}
+
+
+
+
+.banner-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.banner-image {
+  flex: 1 1 65%;
+  padding: 20px;
+}
+
+.banner video {
+  width: 100%;
+  height: auto;
+}
+
+.banner video {
+  width: 100%;
+  height: auto;
+}
+
+.banner2 img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 25px;
+  background-color: #fcf7f2;
+}
+
+.padding {
+  padding: 15px;
+}
+
+.reserve {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 100px;
+  background-color: #244642;
+}
+
+.reserve .libre-caslon-text-regular {
+  margin: 0;
+}
+
+.button {
+  height: 50px;
+  width: 200px;
+  background-color: #f4f4f4;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button a {
+  color: #244642;
+  text-decoration: none;
+}
+
+/* .gallery-item {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 75%;
+}
+
+.gallery-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+ */
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 25px;
+  background-color: #fcf7f2;
+  animation: scroll-right 30s linear infinite;
+}
+
+
+
+.gallery-item {
+  flex: 0 0 auto;
+  width: 300px;
+  /* Increase the width for larger images */
+  height: 200px;
+  /* Fixed height for horizontal cropping */
+  margin-right: 10px;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure the images are always horizontal */
+  display: block;
+}
+
+/* Contact Section */
+/* Contact Section */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+  background-color: #455d58;
+  color: #faf7f2;
+}
+
+.contact-map {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  /* Set a minimum height for the map container */
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  /* Ensure the iframe takes up the full height of its container */
+}
+
+.contact-info {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  text-align: left;
+}
+
+.contact-item {
+  margin: 5px 0;
+}
+
+.contact-item h3 {
+  font-size: 1.2em;
+  font-variant: small-caps;
+  margin-bottom: 0px;
+}
+
+.contact-item p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+  .gallery-item img{
+width:auto;
+  }
+  .contact-map {
+    order: 2;
+    height: 300px;
+    /* Adjust height for smaller screens if needed */
+  }
+
+  .contact-info {
+    order: 1;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-video {
+    width: 100%;
+  }
+
+  .banner video {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .contact-map {
+    height: 200px;
+    /* Further adjust height for very small screens if needed */
+  }
+  .banner {
+    height: auto;
+}
+
+.banner-video {
+    width: 100%;
+}
+
+.banner video {
+    width: 100%;
+    height: auto;
+}
+}
+
+
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+  }
+
+  .gallery-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact-map {
+    order: 2;
+  }
+
+  .contact-info {
+    order: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    flex: 1 1 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fcf7f2;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+  display: block;
+}
+
+.close,
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.close {
+  top: 20px;
+  right: 35px;
+  transform: none;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.close:hover,
+.close:focus,
+.prev:hover,
+.prev:focus,
+.next:hover,
+.next:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+
+
+/* Font classes */
+.libre-caslon-text-regular {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-caslon-text-bold {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-caslon-text-regular-italic {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+/* Font classes for Inter */
+.inter-thin {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.inter-thin-small {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 12px !important;
+}
+
+.inter-thin-italic {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.inter-extra-light {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.inter-extra-light-italic {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.inter-light {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inter-light-italic {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-regular-italic {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.inter-medium {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.inter-medium-italic {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.inter-semibold {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.inter-semibold-italic {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.inter-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inter-bold-italic {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.inter-extra-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.inter-extra-bold-italic {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.inter-black {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.inter-black-italic {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
